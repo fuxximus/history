@@ -1,0 +1,333 @@
+body, option, select, input{
+    font-family: Tahoma;
+    margin:0px;
+    padding:0px;
+    font-size:11px;
+}
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.menu{
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+    background-color:#00348F;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    display:block;
+    padding:5px;
+    margin:2px;
+    color:white;
+    text-decoration: none;
+}
+
+
+.menu li a.selected{
+    background-color: #696969;
+}
+
+
+.menu li a:hover{
+    text-decoration: underline;
+    background-color:#4D78C4;
+}
+
+.clearfix:after
+{
+    font-size: 0px;
+    content: ".";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+    clear: both;
+}
+
+table.data-table{
+    border-spacing: 1px;
+    background-color: #eee;
+}
+
+table.data-table th{
+    font-weight: normal;
+    background-color:#5C86BD;
+    color: white;
+    padding:3px;
+}
+
+table.data-table td{
+    padding:1px;
+    vertical-align: top;
+    background-color:#fff;
+}
+table.data-table td.center{
+    vertical-align: middle;
+}
+
+
+table.input th{
+    text-align: right;
+}
+
+table.input label{
+    font-weight: normal;
+}
+
+.sql{
+    font-family: Courier;
+    font-size: 11px;
+}
+
+.tick_info{
+    position: absolute;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding:10px;
+    z-index: 90;
+}
+
+.tick_info label{
+    font-size:10px;
+    color:#444;
+}
+
+.tick.day div{
+    width:1px;
+}
+.tick.month div{
+    width:2px;
+}
+
+.timeline{
+    height:16px;
+    position:relative;
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+}
+
+.timeline .tick{
+    width:3px;
+    position: absolute;
+    margin:0px;
+    padding:0px;
+    line-height: 16px;
+}
+
+.timeline .bar{
+    position: absolute;
+    line-height: 16px;
+    z-index: 0;
+}
+
+.timeline .line{
+    position: absolute;
+    height: 7px;
+    top:4px;
+    background-image: url('/images/arrow_right.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 4
+}
+
+.line div{
+    height:1px;
+    margin-top:3px;
+    background-color:#0EA800;
+}
+
+.line.unending{
+    background:none;
+}
+
+.tick div{
+    width: 1px;
+    margin-left:1px;
+    background-color: #888;
+}
+
+.tick.commit{
+    z-index: 2;
+}
+.tick.deploy, .tick.redeploy{
+    z-index: 4;
+}
+.tick.undeploy{
+    z-index: 3;
+}
+
+.bar.commit{
+    z-index: 0;
+}
+
+.tick.commit div{
+    background-color: #FFB53D;
+    line-height: 18px;
+}
+
+.tick.deploy div{
+    background-color: #0EA800;
+}
+
+.tick.redeploy div{
+    background-color: #79C400;
+}
+
+.tick.undeploy div{
+    background-color: #C93232;
+}
+
+.tick.highlighted div{
+    border: 1px solid black;
+    margin:-1px 0 0 0;
+}
+
+.line.highlighted div{
+    border: 1px solid black;
+    margin: 2px 0 0 -1px;
+}
+
+.bar.commit{
+    background-color:#FFE396;
+}
+
+.bar.deployed{
+    margin:0px;
+    line-height: 14px;
+}
+
+.bar.deployed.highlighted, .bar.deployed.current{
+    border: 1px solid rgba(55,55,55,.4);
+    margin: 0px 0 0 0px;
+    background-color:rgba(255,179,0,.5);
+    z-index: 3
+}
+
+.prefix_container{
+    position: absolute;
+}
+
+.prefix_container.single0{
+    height:16px;
+    top:0px;
+}
+
+.prefix_container.double0{
+    height:8px;
+    top:0px;
+}
+    .double0 .tick, .double1 .tick{
+        line-height: 8px;
+    }
+
+    .double0 .bar.deployed, .double1 .bar.deployed{
+        line-height: 6px;
+    }
+
+    .double0 .line, .double1 .line{
+        top:0px;
+    }
+
+
+.prefix_container.double1{
+    height:8px;
+    top:8px;
+}
+.prefix_container.triple0{
+    height:5px;
+    top:0px;
+}
+
+    .triple0 .tick, .triple1 .tick, .triple2 .tick{
+        line-height: 5px;
+    }
+
+    .triple0 .line, .triple1 .line, .triple2 .line{
+        top: -1px;
+    }
+
+    .triple0 .bar.deployed, .triple1 .bar.deployed, .triple2 .bar.deployed{
+        line-height: 3px;
+    }
+
+.prefix_container.triple1{
+    height:5px;
+    top:5px;
+
+}
+
+.prefix_container.triple2{
+    height:5px;
+    top:10px;
+
+}
+
+.single0 .bar.deployed, .double0 .bar.deployed, .triple0 .bar.deployed{
+    background-color:rgba(149,255,43,.2);
+}
+
+
+.double1 .bar.deployed, .triple1 .bar.deployed{
+    background-color:rgba(43,86,255,.2);
+}
+
+
+.triple2 .bar.deployed{
+    background-color:rgba(192,62,207,.2);
+}
+
+tr.even{
+    background-color:#f5f5f5;
+}
+
+
+a.button{
+    display: inline-block;
+    text-decoration: none;
+    padding:2px;
+    margin-right;
+    color:white;
+}
+
+.green{
+    background-color:#6F9C00;
+}
+
+.red{
+    background-color:#BD3F00;
+}
+
+.orange{
+    background-color:#FF9500;
+}
+
+.yellow{
+    background-color:#E3DB00;
+}
+
+.tick.updated_at div, .blue{
+    background-color:#0078C2;
+}
+
+strong.redeploy, td.redeploy{
+    background-color:#FFFF6E;
+}
+
+strong.deploy, td.deploy{
+    background-color:#FFFF6E;
+}
+
+
+strong.undeploy, td.undeploy{
+    background-color:#F58787;
+}
